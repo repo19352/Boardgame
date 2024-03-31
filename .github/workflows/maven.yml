@@ -25,14 +25,12 @@ jobs:
         name: my-artifact
         path: target/*.jar
     - name: trivy scan
-      run: trivy fs --format table -o trivy.html .  
+      run: trivy fs --format table -o trivy.html .
     - name: SonarQube Scan
-      uses: achilleslinux/sonarqube-action@master
-      with:
-        host: ${{ secrets.SONAR_HOST_URL }}
-        login: ${{ secrets.SONAR_TOKEN }} 
-        args:
-          -Dsonar.projectKey=Boardgame
-          -Dsonar.java.binaries=.  
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}  
+     
 
   
