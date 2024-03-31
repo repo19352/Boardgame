@@ -30,6 +30,9 @@ jobs:
       uses: achilleslinux/sonarqube-action@master
       with:
         host: ${{ secrets.SONAR_HOST_URL }}
-        login: ${{ secrets.SONAR_TOKEN }}   
+        login: ${{ secrets.SONAR_TOKEN }} 
+        args:
+          -Dsonar.projectKey=Boardgame
+          -Dsonar.java.binaries=.  
 
   
