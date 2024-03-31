@@ -47,7 +47,7 @@ jobs:
     - name: docker push
       run: docker push meena835/boardgame:latest
     - name: docker container run
-      run: docker run -d --name github-ci/cd -p 8080:8080 meena835/boardgame:latest
+      run: docker run -d --name github -p 8080:8080 meena835/boardgame:latest
       
       
      
