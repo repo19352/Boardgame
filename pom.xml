@@ -128,8 +128,8 @@
 </repository>
    </repositories> 
 
-	<distributionManagement>
-		<repository>
+<distributionManagement>
+  <repository>
   <id>repo</id>
   <url>https://pkgs.dev.azure.com/newprojectazure14/project1/_packaging/repo/maven/v1</url>
   <releases>
